@@ -1,0 +1,22 @@
+meta {
+  name: createSubject
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:3000/api/v1/subjects
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Objektinis programavimas",
+        "credits": "sesi"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
