@@ -12,6 +12,12 @@ CREATE TABLE IF NOT EXISTS students (
     subject_id INTEGER NOT NULL,    
     CONSTRAINT fk_subject FOREIGN KEY (subject_id) REFERENCES subjects(id) ON DELETE CASCADE
 );
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,  
+    email VARCHAR(150) NOT NULL UNIQUE,     
+    password VARCHAR(255) NOT NULL    
+);
 
 INSERT INTO subjects (name, credits) VALUES 
 ('Objektinis programavimas', 6),
