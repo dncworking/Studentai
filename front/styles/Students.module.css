@@ -1,0 +1,150 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pageTitle {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #eceff1;
+  padding-bottom: 0.5rem;
+}
+
+/* 📊 Lentelės stilius */
+.tableContainer {
+  width: 100%;
+  overflow-x: auto; /* Apsauga, kad mažesniuose ekranuose lentelė nenumuštų dizaino */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  color: #34495e;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.table td {
+  padding: 1rem 1.5rem;
+  color: #2c3e50;
+  font-size: 1rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+/* Eilučių paryškinimas užvedus pelę */
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Kursų stiliukas – padarome kaip mažą gražią kortelę/ženkliuką */
+.table td:nth-child(3) {
+  font-weight: 600;
+  color: #3498db;
+}
+
+/* Pranešimų stiliai (Loading / Tuščia) */
+.message {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+  font-style: italic;
+}
+
+/* Klaidos pranešimas, jei backend'as lūžta */
+.errorMessage {
+  text-align: center;
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-top: 2rem;
+  border: 1px solid #fca5a5;
+}
+
+
+/* Konteineris mygtukams lentelės celėje */
+.actionsCell {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Bendras mygtukų stilius su ikonomis */
+.editBtn, .deleteBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+/* Redagavimo mygtukas (Geltonas/Oranžinis) */
+.editBtn {
+  background-color: #f39c12;
+}
+
+.editBtn:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+/* Trynimo mygtukas (Raudonas) */
+.deleteBtn {
+  background-color: #e74c3c;
+}
+
+.deleteBtn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Apsaugome lentelės kampus, jei įdėjome tableContainer div wrapperį */
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Prisitaikymas telefonams */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+
+  .table th, .table td {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
